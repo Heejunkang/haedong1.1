@@ -261,6 +261,7 @@ def is_it_sell(subject_code, current_price):
                             '수량': contract.list[subject_code]['계약타입'][contract.SAFE] +
                                   contract.list[subject_code]['계약타입'][contract.DRIBBLE]}
 
+
                 elif current_price <= contract.list[subject_code]['손절가']:
 
                     if contract.get_contract_count(subject_code) == subject.info[subject_code]['신규매매수량']:
