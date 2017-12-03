@@ -8,6 +8,8 @@ data = {}
 data['이동평균선'] = {}
 data['이동평균선']['일수'] = [45, 60, 150, 160]
 
+data_day = {}
+
 def create_data(subject_code):
     data[subject_code] = {}
     
@@ -108,6 +110,16 @@ def is_sorted(subject_code, lst):
         return '상승세'
 
     return '모름'
+
+
+def push_day(subject_code, candle):
+
+    if subject_code not in data_day:
+        data_day[subject_code] = {}
+
+    #data['GCG18'][0][현재가]
+
+
 
 def push(subject_code, price):
     '''
